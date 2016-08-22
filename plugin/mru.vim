@@ -1025,10 +1025,10 @@ autocmd QuickFixCmdPre *vimgrep* let s:mru_list_locked = 1
 autocmd QuickFixCmdPost *vimgrep* let s:mru_list_locked = 0
 
 " Command to open the MRU window
-command! -nargs=? -complete=customlist,s:MRU_Complete MRU
-            \ call s:MRU_Cmd(<q-args>)
-command! -nargs=? -complete=customlist,s:MRU_Complete Mru
-            \ call s:MRU_Cmd(<q-args>)
+"command! -nargs=? -complete=customlist,s:MRU_Complete MRU
+"            \ call s:MRU_Cmd(<q-args>)
+"command! -nargs=? -complete=customlist,s:MRU_Complete Mru
+"            \ call s:MRU_Cmd(<q-args>)
 
 " }}}
 
