@@ -981,17 +981,17 @@ autocmd QuickFixCmdPre *vimgrep* let s:mru_list_locked = 1
 autocmd QuickFixCmdPost *vimgrep* let s:mru_list_locked = 0
 
 " MRU custom commands {{{1
-if v:version >= 800
-  command! -nargs=? -complete=customlist,s:MRU_Complete -count=0 MRU
-	\ call s:MRU_Cmd(<q-args>, <q-mods>, <count>)
-  command! -nargs=? -complete=customlist,s:MRU_Complete -count=0 Mru
-	\ call s:MRU_Cmd(<q-args>, <q-mods>, <count>)
-else
-  command! -nargs=? -complete=customlist,s:MRU_Complete -count=0 MRU
-	\ call s:MRU_Cmd(<q-args>, '', <count>)
-  command! -nargs=? -complete=customlist,s:MRU_Complete -count=0 Mru
-	\ call s:MRU_Cmd(<q-args>, '', <count>)
-endif
+"if v:version >= 800
+"  command! -nargs=? -complete=customlist,s:MRU_Complete -count=0 MRU
+"	\ call s:MRU_Cmd(<q-args>, <q-mods>, <count>)
+"  command! -nargs=? -complete=customlist,s:MRU_Complete -count=0 Mru
+"	\ call s:MRU_Cmd(<q-args>, <q-mods>, <count>)
+"else
+"  command! -nargs=? -complete=customlist,s:MRU_Complete -count=0 MRU
+"	\ call s:MRU_Cmd(<q-args>, '', <count>)
+"  command! -nargs=? -complete=customlist,s:MRU_Complete -count=0 Mru
+"	\ call s:MRU_Cmd(<q-args>, '', <count>)
+"endif
 command! -nargs=0 MruRefresh call s:MRU_Refresh()
 
 " FZF (fuzzy finder) integration    {{{1
